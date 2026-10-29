@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    font-family: '"Plus Jakarta Sans"', sans-serif;
+    background-color: #0f1417;
+    color: #e2e8f0;
+  }
+  /* Light theme overrides */
+  body.theme-light {
+    background-color: #f8fafc;
+    color: #1e293b;
+  }
+  body.theme-light .obsidian-bg { background-color: #f8fafc; }
+  body.theme-light .obsidian-card { background-color: #ffffff; border-color: #e2e8f0; }
+  body.theme-light .obsidian-surface { background-color: #f1f5f9; }
+  body.theme-light .obsidian-border { border-color: #e2e8f0; }
+  body.theme-light .text-muted { color: #64748b; }
+  body.theme-light .text-heading { color: #0f172a; }
+}
+
+@layer components {
+  .obsidian-bg { background-color: #0f1417; }
+  .obsidian-card { background-color: #12191d; border: 1px solid #1b2327; }
+  .obsidian-surface { background-color: #1b2327; }
+  .obsidian-border { border-color: #1b2327; }
+  .text-muted { color: #94a3b8; }
+  .text-heading { color: #f1f5f9; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1417;
+}
+::-webkit-scrollbar-thumb {
+  background: #242d32;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* QR code container glow */
+.qr-glow {
+  box-shadow: 0 0 30px #10b98133, inset 0 0 20px #10b98111;
+}
